@@ -1,0 +1,12 @@
+# ---- macOS / Jupyter cruft ----
+.DS_Store
+**/.ipynb_checkpoints/
+
+# ---- RQ2: keep raw sources LOCAL only; push just the merged table ----
+# All raw RQ2 inputs stay on disk (so the build notebook's data links still open locally)
+# but are NOT pushed. Only rq2_state_table.csv — the single merged table — is tracked.
+data/RQ2/*
+!data/RQ2/rq2_state_table.csv
+
+# ---- RQ2 build notebook (parses the raw sources) — kept local, not pushed ----
+analysis/RQ2/rq2_capacity_demographics.ipynb
